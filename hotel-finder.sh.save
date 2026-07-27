@@ -1,0 +1,26 @@
+#!/bin/bash
+set -e
+
+PROJECT="hotel-finder"
+mkdir -p $PROJECT/public/icons
+cd $PROJECT
+
+# package.json (with Tailwind and PostCSS included)
+cat > package.json <<'EOF'
+{
+  "name": "hotel-finder",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "14.1.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "next-pwa": "^5.6.0",
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.33",
+    "autoprefixer": "^

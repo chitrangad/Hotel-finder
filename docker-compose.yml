@@ -1,0 +1,9 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "8001:3000"
+    environment:
+      - SERPAPI_KEY=2a018491ebdeae01c49f0b94766437b7367b3faaa08c8e5febc645c0362d2843
+    restart: unless-stopped
