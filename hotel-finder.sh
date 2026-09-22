@@ -35,7 +35,7 @@ cat > package.json <<'EOF'
 EOF
 
 # Generate package-lock.json by installing dependencies locally
-echo "� Installing dependencies (this creates package-lock.json)..."
+echo "ðŸ“ Installing dependencies (this creates package-lock.json)..."
 
 # tsconfig.json
 cat > tsconfig.json <<'EOF'
@@ -140,7 +140,7 @@ services:
     ports:
       - "8001:3000"
     environment:
-      - SERPAPI_KEY=2a018491ebdeae01c49f0b94766437b7367b3faaa08c8e5febc645c0362d2843
+      - SERPAPI_KEY=<yourkey>
     restart: unless-stopped
 EOF
 
@@ -301,7 +301,7 @@ export default function Home() {
 
   return (
     <main className="max-w-7xl mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-6">� Last-Minute Hotel Deals</h1>
+      <h1 className="text-3xl font-bold mb-6">ðŸ Last-Minute Hotel Deals</h1>
 
       {/* Search form */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
@@ -341,9 +341,9 @@ export default function Home() {
             onChange={(e) => setStars(e.target.value)}
           >
             <option value="">All</option>
-            <option value="3">3★ & up</option>
-            <option value="4">4★ & up</option>
-            <option value="5">5★</option>
+            <option value="3">3â˜… & up</option>
+            <option value="4">4â˜… & up</option>
+            <option value="5">5â˜…</option>
           </select>
         </div>
       </div>
@@ -418,7 +418,7 @@ export default function Home() {
                   <td className="p-3 font-medium">{h.name}</td>
                   <td className="p-3">{h.price_per_night}</td>
                   <td className="p-3">{h.total_price}</td>
-                  <td className="p-3">{h.rating} ★</td>
+                  <td className="p-3">{h.rating} â˜…</td>
                   <td className="p-3">{h.reviews.toLocaleString()}</td>
                   <td className="p-3 text-sm">
                     {h.amenities.slice(0, 3).join(", ")}
@@ -432,7 +432,7 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className="text-blue-400 hover:underline"
                     >
-                      View Deal →
+                      View Deal â†’
                     </a>
                   </td>
                 </tr>
@@ -591,11 +591,11 @@ export async function GET(request: NextRequest) {
 EOF
 
 echo ""
-echo "✅ All files created successfully in ./$PROJECT"
+echo "âœ… All files created successfully in ./$PROJECT"
 echo ""
-echo "� Next steps:"
+echo "ðŸ“ Next steps:"
 echo "   cd $PROJECT"
 echo "   (Create .env file with SERPAPI_KEY if you want real data)"
 echo "   docker compose up --build"
 echo ""
-echo "� The build will now succeed - all dependencies and config files are in place."
+echo "ðŸ’ The build will now succeed - all dependencies and config files are in place."
