@@ -5,5 +5,5 @@ services:
     ports:
       - "8001:3000"
     environment:
-      - SERPAPI_KEY=2a018491ebdeae01c49f0b94766437b7367b3faaa08c8e5febc645c0362d2843
+      - SERPAPI_KEY=<yourkey>
     restart: unless-stopped
